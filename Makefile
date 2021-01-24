@@ -16,7 +16,11 @@ help:
 	@echo "  clean               -- to clean EVERYTHING (Warning)"
 	@echo "  clean-doc       -- to remove documentation builds"
 	@echo "  clean-pycache       -- to remove all __pycache__, this is recursive from current directory"
+	@echo "  clean-frontend      -- to clean Frontend side installation"
 	@echo "  clean-install       -- to clean Python side installation"
+	@echo ""
+	@echo "  frontend            -- to build frontend into app static dir"
+	@echo "  watch-frontend      -- to launch webpack in watch mode to rebuild frontend on each change"
 # 	@echo ""
 # 	@echo "  livedocs            -- to run livereload server to rebuild documentation on source changes"
 	@echo ""
@@ -38,11 +42,15 @@ clean-install:
 	rm -Rf $(PACKAGE_NAME).egg-info
 .PHONY: clean-install
 
+clean-frontend:
+	rm -Rf node_modules
+.PHONY: clean-frontend
+
 clean-doc:
 	rm -Rf docs/_build
 .PHONY: clean-doc
 
-clean: clean-doc clean-install clean-pycache
+clean: clean-doc clean-install clean-frontend clean-pycache
 .PHONY: clean
 
 venv:
@@ -54,11 +62,20 @@ venv:
 
 install: venv
 	$(PIP) install -e .[dev]
+	npm install --production=false
 .PHONY: install
 #
 # livedocs:
 # 	$(SPHINX_RELOAD)
 # .PHONY: livedocs
+
+frontend:
+	npm run-script build
+.PHONY: frontend
+
+watch-frontend:
+	npm run-script watch
+.PHONY: watch-frontend
 
 flake:
 	$(FLAKE) --show-source $(APPLICATION_NAME)
