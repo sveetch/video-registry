@@ -9,7 +9,7 @@ import pytest
 import video_registry
 
 from video_registry.backend.initialize import init_database
-from video_registry.backend.models import File
+from video_registry.backend.models import Dummy, File
 from video_registry.serve.apps import ServerApp
 from video_registry.serve.server import RegistryServer
 
@@ -116,7 +116,7 @@ def db(caplog):
     db = init_database()
 
     with db.transaction() as txn:  # `db` is my database object
-        db.create_tables([File])
+        db.create_tables([Dummy, File])
         yield txn
         txn.rollback()
 

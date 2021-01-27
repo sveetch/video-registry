@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 
 from video_registry.discovery import VideoFileDiscovery
+from video_registry.backend.models import File
 
 
 @pytest.mark.parametrize("exts,expected", [
@@ -152,3 +153,20 @@ def test_scan(settings):
 
     # Count expected matching files
     assert len(paths) == 11
+
+
+def test_store(settings, db):
+    """
+    Every valid file should be stored.
+    """
+    directories = [
+        os.path.join(settings.fixtures_path, "dummy-videos-dir"),
+        os.path.join(settings.fixtures_path, "another-dummy-dir"),
+        os.path.join(settings.fixtures_path, "dummy-videos-dir/foo"),
+    ]
+
+    disco = VideoFileDiscovery()
+
+    paths = disco.store(directories)
+
+    assert File.select().count() == 11

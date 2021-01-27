@@ -1,8 +1,5 @@
 import pytest
 
-from video_registry.serve.apps import ServerApp
-from video_registry.serve.server import RegistryServer
-
 from tests.utils import html_pyquery
 
 

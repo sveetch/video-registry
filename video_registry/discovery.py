@@ -8,6 +8,8 @@ import os
 
 from pathlib import Path
 
+from video_registry.backend.models import File
+
 
 class VideoFileDiscovery:
     """
@@ -140,6 +142,28 @@ class VideoFileDiscovery:
         for directory in directories:
             filepaths.extend(
                 self.scan_directory(directory, knowed=knowed)
+            )
+
+        return filepaths
+
+    def store(self, directories):
+        """
+        Scan and store retrieved paths.
+
+        TODO: Finish storing files for location dirs.
+
+        Arguments:
+            directories (list): List of directory paths to scan.
+        """
+        filepaths = self.scan(directories)
+
+        for item in filepaths:
+            ping = File.create(
+                relative_path=item["relative_path"],
+                absolute_path=item["absolute_path"],
+                basedir=item["basedir"],
+                extension=item["extension"],
+                size=item["size"],
             )
 
         return filepaths

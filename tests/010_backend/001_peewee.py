@@ -4,7 +4,7 @@ import pytest
 
 from peewee import OperationalError as PeeWeeOperationalError
 
-from video_registry.backend.models import File
+from video_registry.backend.models import Dummy
 
 
 def test_db_01_fixture(caplog, db):
@@ -16,13 +16,13 @@ def test_db_01_fixture(caplog, db):
     caplog.set_level(logging.DEBUG)
 
     # Create a basic object
-    obj = File.create(
-        path="Charlie",
+    obj = Dummy.create(
+        name="Charlie",
     )
 
     # Check object has been correctly saved and not more
-    assert File.select().count() == 1
-    assert File.get_by_id(obj.id).path == "Charlie"
+    assert Dummy.select().count() == 1
+    assert Dummy.get_by_id(obj.id).name == "Charlie"
 
 
 def test_db_02_fixture(caplog):
@@ -36,4 +36,4 @@ def test_db_02_fixture(caplog):
     caplog.set_level(logging.DEBUG)
 
     with pytest.raises(PeeWeeOperationalError):
-        File.select().count()
+        Dummy.select().count()
