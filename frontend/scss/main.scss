@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// Load project settings
+@import "./settings/fonts";
+@import "./settings/bootstrap";
+
+// Import the whole Bootstrap component library
+@import "bootstrap/scss/bootstrap";
+@import 'bootstrap-vue/src/index.scss';
+
+.foop {
+    color: red;
+}
