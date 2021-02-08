@@ -1,0 +1,264 @@
+{% extends "skeleton.html" %}
+{% load static %}
+
+{% block head_title %}Styleguide - {{ block.super }}{% endblock %}
+
+{% block head_more_links %}
+    <link rel="stylesheet" href="{% static "css/styleguide.css" %}">
+{% endblock head_more_links %}
+
+{% block content_container %}
+<div class="styleguide container">
+    <div class="pt-4 pb-4">
+        <div class="container">
+            <h1 class="display-2 text-center">Styleguide</h1>
+
+            {% if styleguide.resolve_error %}
+                <div class="callout warning">
+                    <h2>Warning</h2>
+                    <p>Due to following error, this is a manually saved styleguide, it may not be up-to-date.</p>
+                    <p><strong>{{ styleguide.resolve_error|safe }}</strong></p>
+                </div>
+                {% include "styleguide/_saved.html" %}
+            {% else %}
+
+                <div id="styleguide-render">
+                    <div class="pt-4 pb-4">
+                        <div class="container mt-4 text-center">
+                            <h2 class="display-3 p-4">Typography</h2>
+                        </div>
+
+                        <div class="container mt-4">
+                            <hr>
+                            <h3 class="display-4 mb-3">Font families</h3>
+
+                            <div class="row">
+                                {% for name in styleguide.fonts %}
+                                <div class="col font-{{ name }}">
+                                    <h4>{{ name }}</h4>
+                                    <p>{% include "styleguide/inline_markup.html" %}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="container mt-4">
+                            <hr>
+                            <h3 class="display-4 mb-3">Base text</h3>
+
+                            <p>{% include "styleguide/inline_markup.html" %}</p>
+                            {% lorem 1 p random %}
+
+                            <ul>
+                                {% for i in "35256"|make_list %}
+                                <li>
+                                    {% lorem i w random %}
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="container mt-4">
+                            <hr>
+                            <h3 class="display-4 mb-3">Thickness</h3>
+
+
+                            <div class="row">
+                                {% for name in styleguide.fonts %}
+                                    <div class="col font-{{ name }}">
+                                        <h4>{{ name|title }}</h4>
+                                        <p class="font-weight-extrabold">Extra Bold text.</p>
+                                        <p class="font-weight-boldest">Boldest text.</p>
+                                        <p class="font-weight-bolder">Bolder text.</p>
+                                        <p class="font-weight-bold">Bold text.</p>
+                                        <p class="font-weight-normal">Normal weight text.</p>
+                                        <p class="font-weight-light">Light weight text.</p>
+                                        <p class="font-weight-lighter">Lighter weight text.</p>
+                                        <p class="font-italic">Italic text.</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="container mt-4">
+                            <hr>
+                            <h3 class="display-4 mb-3">Sizes</h3>
+
+                            <div class="row">
+                                <div class="col">
+                                    {% for i in "123456"|make_list %}
+                                    <h{{ i }}>&lt;h{{ i }}&gt; {% lorem 3 w random %}</h{{ i }}>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="col">
+                                    {% for i in "123456"|make_list %}
+                                    <p class="h{{ i }}">&lt;p.h{{ i }}&gt; {% lorem 3 w random %}</p>
+                                    {% endfor %}
+                                    <p>&lt;p&gt; {% lorem 3 w random %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="pt-4 pb-4">
+                        <div class="container text-center">
+                            <h2 class="display-3 p-4">Colors</h2>
+                        </div>
+
+                        <div class="container mt-4">
+                            <h3 class="display-4 mb-3">Palette ({{ styleguide.palette|length }})</h3>
+
+                            <div class="palette">
+                                {% for k,v in styleguide.palette.items %}
+                                    <div class="palette__item palette__item--{{ k }}" id="styleguide-palette-{{ k }}">
+                                        <a href="#styleguide-scheme-{{ k }}" class="palette__color palette__link"></a>
+                                        <p class="palette__code">{{ v }}</p>
+                                        <p class="palette__name">{{ k }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="container mt-4">
+                            <h3 class="display-4 mb-3">Bootstrap theme ({{ styleguide.bootstrap_theme|length }})</h3>
+
+                            <div class="palette">
+                                {% for k,v in styleguide.bootstrap_theme.items %}
+                                    <div class="palette__item" id="styleguide-palette-{{ k }}">
+                                        <a href="#styleguide-scheme-{{ k }}" class="palette__color bg-{{ k }} palette__link"></a>
+                                        <p class="palette__code">{{ v }}</p>
+                                        <p class="palette__name">{{ k }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="container mt-4">
+                            <h3 class="display-4 mb-3">As text</h3>
+
+                            <div class="styleguide__text-columns">
+                                {% for item in styleguide.palette %}
+                                    <p class="text-{{ item }}{% if item == "white" %} bg-black{% endif %}">.text-{{ item }}: <b>Bold</b>, <span class="h4">Title 4</span>, <span class="h3">Title 3</span></p>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pt-4 pb-4">
+                        <div class="container text-center">
+                            <h2 class="display-3 p-4">Icons ({{ styleguide.icons|length }})</h2>
+                        </div>
+
+                        <div class="container mt-4">
+                            <div class="icons row">
+                                {% for item in styleguide.icons %}
+                                    <div class="col-6 col-lg-3 px-2 py-2">
+                                        <p class="text-center">
+                                            <i class="{{ item }} icon-3x"></i><br>
+                                            <small>.{{ item }}</small>
+                                        </p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pt-4 pb-4">
+                        <div class="container text-center">
+                            <h2 class="display-3 p-4">Controls</h2>
+                        </div>
+
+                        <div class="container mt-4">
+                            <h3 class="display-4 mb-3">Buttons</h3>
+
+                            <hr>
+                            <h4 class="h2 mb-3">Element support</h4>
+                            <div class="styleguide__buttons">
+                                <p class="btn btn-primary">Default .button as <code>&lt;p&gt;</code></p>
+                                <a href="#" class="btn btn-primary">Default .button as <code>&lt;a&gt;</code></a>
+                                <button class="btn btn-primary">Default .button as <code>&lt;button&gt;</code></button>
+                            </div>
+
+                            <hr>
+                            <h4 class="h2 mb-3">Color scheme modifiers</h4>
+                            <div class="styleguide__buttons">
+                                <a href="#" class="btn mb-2 mr-2">Uncolored</a>
+                                {% for item in styleguide.schemes %}
+                                    <a href="#" class="btn btn-{{ item }} mb-2 mr-2">{{ item }}</a>
+                                {% endfor %}
+                            </div>
+
+                            <hr>
+                            <h4 class="h2 mb-3">Size modifiers</h4>
+                            <div class="styleguide__buttons">
+                                <a href="#" class="btn btn-primary btn-tiny">Tiny size</a>
+                                <a href="#" class="btn btn-primary btn-small">Small size</a>
+                                <a href="#" class="btn btn-primary">Default size</a>
+                                <a href="#" class="btn btn-primary btn-large">Large size</a>
+                            </div>
+
+                            <hr>
+                            <h4 class="h2 mb-3">Form factors</h4>
+                            <div class="styleguide__buttons">
+                                <a href="#" class="btn btn-primary btn-tiny">Default</a>
+                                <a href="#" class="btn btn-primary btn-tiny btn-square">Square</a>
+                                <a href="#" class="btn btn-primary btn-tiny btn-pill">Pill</a>
+                                <a href="#" class="btn btn-primary btn-tiny btn-round">Round</a>
+                                <hr>
+                                <a href="#" class="btn btn-primary btn-small">Default</a>
+                                <a href="#" class="btn btn-primary btn-small btn-square">Square</a>
+                                <a href="#" class="btn btn-primary btn-small btn-pill">Pill</a>
+                                <a href="#" class="btn btn-primary btn-small btn-round">Round</a>
+                                <hr>
+                                <a href="#" class="btn btn-primary">Default</a>
+                                <a href="#" class="btn btn-primary btn-square">Square</a>
+                                <a href="#" class="btn btn-primary btn-pill">Pill</a>
+                                <a href="#" class="btn btn-primary btn-round">Round</a>
+                                <hr>
+                                <a href="#" class="btn btn-primary btn-large">Default</a>
+                                <a href="#" class="btn btn-primary btn-large btn-square">Square</a>
+                                <a href="#" class="btn btn-primary btn-large btn-pill">Pill</a>
+                                <a href="#" class="btn btn-primary btn-large btn-round">Round</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pt-4 pb-4">
+                        <div class="container text-center">
+                            <h2 class="display-3 p-4">Color schemes ({{ styleguide.schemes|length }})</h2>
+                        </div>
+
+                        <div class="container styleguide__pane-grid">
+                            {% for item in styleguide.schemes %}
+                                <div class="styleguide__block styleguide__block--{{ item }}"
+                                    id="styleguide-scheme-{{ item }}">
+                                    <p class="h1">
+                                        {{ item }}
+                                        <a href="#styleguide-palette-{{ item }}">¶</a>
+                                    </p>
+                                    {% for i in "123456"|make_list %}
+                                    <p class="h{{ i }}">&lt;p.h{{ i }}&gt; {% lorem 3 w random %}</p>
+                                    {% endfor %}
+                                    <p>&lt;p&gt; {% lorem 3 w random %}</p>
+                                    <p>{% include "styleguide/inline_markup.html" %}</p>
+                                </div>
+                                {% if not forloop.last %}<hr>{% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endblock content_container %}

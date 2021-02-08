@@ -1,0 +1,775 @@
+/*
+ * Additional site specific settings
+ */
+/*
+ * Colors palettes
+ */
+/*
+ * Colors settings for enabled palette
+ */
+.styleguide__pane-grid {
+  background: linear-gradient(-90deg, #c3c3c3 0.07143rem, transparent 0.07143rem), linear-gradient(#c3c3c3 0.07143rem, transparent 0.07143rem), linear-gradient(-90deg, #c3c3c3 0.07143rem, transparent 0.07143rem), linear-gradient(#c3c3c3 0.07143rem, transparent 0.07143rem), linear-gradient(transparent 0.1875rem, transparent 0.1875rem, transparent 4.875rem, transparent 4.875rem), linear-gradient(-90deg, transparent 0.07143rem, transparent 0.07143rem), linear-gradient(-90deg, transparent 0.1875rem, transparent 0.1875rem, transparent 4.875rem, transparent 4.875rem), linear-gradient(transparent 0.07143rem, transparent 0.07143rem), transparent;
+  background-size: 0.625rem 0.625rem, 0.625rem 0.625rem, 0.625rem 0.625rem, 0.625rem 0.625rem, 0.625rem 0.625rem, 0.625rem 0.625rem, 0.625rem 0.625rem, 0.625rem 0.625rem;
+  border: 0.07143rem solid #878787;
+}
+
+.styleguide__text-columns {
+  column-count: 2;
+  column-gap: 2rem;
+}
+
+.styleguide .palette {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: inherit;
+}
+
+.styleguide .palette__item, .styleguide .palette__gradient {
+  flex: 1 0 20%;
+  max-width: 20%;
+  padding: 0.5rem;
+}
+
+.styleguide .palette__color {
+  display: block;
+  width: 100%;
+  height: 3rem;
+}
+
+.styleguide .palette__link {
+  position: relative;
+}
+
+.styleguide .palette__link::after {
+  content: "\21b5";
+  position: absolute;
+  padding: 0.3rem;
+  display: block;
+  bottom: 0;
+  right: 0;
+  color: #252525;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.4);
+  border-top-left-radius: 0.5rem;
+}
+
+.styleguide .palette__item--white .palette__color {
+  background-color: #ffffff;
+}
+
+.styleguide .palette__item--smoke .palette__color {
+  background-color: #fcfcfc;
+}
+
+.styleguide .palette__item--snow .palette__color {
+  background-color: #f9f9f9;
+}
+
+.styleguide .palette__item--pale-grey .palette__color {
+  background-color: #eeeeee;
+}
+
+.styleguide .palette__item--light-grey .palette__color {
+  background-color: #e5e5e5;
+}
+
+.styleguide .palette__item--silver .palette__color {
+  background-color: #c3c3c3;
+}
+
+.styleguide .palette__item--warm-grey .palette__color {
+  background-color: #878787;
+}
+
+.styleguide .palette__item--medium-grey .palette__color {
+  background-color: #817c7c;
+}
+
+.styleguide .palette__item--slate-grey .palette__color {
+  background-color: #525a65;
+}
+
+.styleguide .palette__item--charcoal .palette__color {
+  background-color: #333333;
+}
+
+.styleguide .palette__item--dark .palette__color {
+  background-color: #252525;
+}
+
+.styleguide .palette__item--black .palette__color {
+  background-color: #000000;
+}
+
+.styleguide .palette__item--olive-green1 .palette__color {
+  background-color: #b9c77c;
+}
+
+.styleguide .palette__item--olive-green2 .palette__color {
+  background-color: #9fb245;
+}
+
+.styleguide .palette__item--turtle-green .palette__color {
+  background-color: #8ac44a;
+}
+
+.styleguide .palette__item--rusty-red .palette__color {
+  background-color: #ad1616;
+}
+
+.styleguide__block {
+  padding: 2rem;
+}
+
+.styleguide__block--white {
+  color: #252525;
+  background: #ffffff;
+}
+
+.styleguide__block--white h1, .styleguide__block--white .title-1 {
+  color: #252525;
+}
+
+.styleguide__block--white h2, .styleguide__block--white .title-2 {
+  color: #252525;
+}
+
+.styleguide__block--white h3, .styleguide__block--white .title-3 {
+  color: #252525;
+}
+
+.styleguide__block--white h4, .styleguide__block--white .title-4 {
+  color: #252525;
+}
+
+.styleguide__block--white h5, .styleguide__block--white .title-5 {
+  color: #252525;
+}
+
+.styleguide__block--white h6, .styleguide__block--white .title-6 {
+  color: #252525;
+}
+
+.styleguide__block--smoke {
+  color: #000000;
+  background: #fcfcfc;
+}
+
+.styleguide__block--smoke h1, .styleguide__block--smoke .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--smoke h2, .styleguide__block--smoke .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--smoke h3, .styleguide__block--smoke .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--smoke h4, .styleguide__block--smoke .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--smoke h5, .styleguide__block--smoke .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--smoke h6, .styleguide__block--smoke .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--snow {
+  color: #000000;
+  background: #f9f9f9;
+}
+
+.styleguide__block--snow h1, .styleguide__block--snow .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--snow h2, .styleguide__block--snow .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--snow h3, .styleguide__block--snow .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--snow h4, .styleguide__block--snow .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--snow h5, .styleguide__block--snow .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--snow h6, .styleguide__block--snow .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--pale-grey {
+  color: #000000;
+  background: #eeeeee;
+}
+
+.styleguide__block--pale-grey h1, .styleguide__block--pale-grey .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--pale-grey h2, .styleguide__block--pale-grey .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--pale-grey h3, .styleguide__block--pale-grey .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--pale-grey h4, .styleguide__block--pale-grey .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--pale-grey h5, .styleguide__block--pale-grey .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--pale-grey h6, .styleguide__block--pale-grey .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--light-grey {
+  color: #000000;
+  background: #e5e5e5;
+}
+
+.styleguide__block--light-grey h1, .styleguide__block--light-grey .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--light-grey h2, .styleguide__block--light-grey .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--light-grey h3, .styleguide__block--light-grey .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--light-grey h4, .styleguide__block--light-grey .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--light-grey h5, .styleguide__block--light-grey .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--light-grey h6, .styleguide__block--light-grey .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--silver {
+  color: #000000;
+  background: #c3c3c3;
+}
+
+.styleguide__block--silver h1, .styleguide__block--silver .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--silver h2, .styleguide__block--silver .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--silver h3, .styleguide__block--silver .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--silver h4, .styleguide__block--silver .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--silver h5, .styleguide__block--silver .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--silver h6, .styleguide__block--silver .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--warm-grey {
+  color: #ffffff;
+  background: #878787;
+}
+
+.styleguide__block--warm-grey h1, .styleguide__block--warm-grey .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--warm-grey h2, .styleguide__block--warm-grey .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--warm-grey h3, .styleguide__block--warm-grey .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--warm-grey h4, .styleguide__block--warm-grey .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--warm-grey h5, .styleguide__block--warm-grey .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--warm-grey h6, .styleguide__block--warm-grey .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--medium-grey {
+  color: #ffffff;
+  background: #817c7c;
+}
+
+.styleguide__block--medium-grey h1, .styleguide__block--medium-grey .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--medium-grey h2, .styleguide__block--medium-grey .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--medium-grey h3, .styleguide__block--medium-grey .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--medium-grey h4, .styleguide__block--medium-grey .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--medium-grey h5, .styleguide__block--medium-grey .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--medium-grey h6, .styleguide__block--medium-grey .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--slate-grey {
+  color: #ffffff;
+  background: #525a65;
+}
+
+.styleguide__block--slate-grey h1, .styleguide__block--slate-grey .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--slate-grey h2, .styleguide__block--slate-grey .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--slate-grey h3, .styleguide__block--slate-grey .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--slate-grey h4, .styleguide__block--slate-grey .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--slate-grey h5, .styleguide__block--slate-grey .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--slate-grey h6, .styleguide__block--slate-grey .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--charcoal {
+  color: #ffffff;
+  background: #333333;
+}
+
+.styleguide__block--charcoal h1, .styleguide__block--charcoal .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--charcoal h2, .styleguide__block--charcoal .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--charcoal h3, .styleguide__block--charcoal .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--charcoal h4, .styleguide__block--charcoal .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--charcoal h5, .styleguide__block--charcoal .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--charcoal h6, .styleguide__block--charcoal .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--dark {
+  color: #ffffff;
+  background: #252525;
+}
+
+.styleguide__block--dark h1, .styleguide__block--dark .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--dark h2, .styleguide__block--dark .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--dark h3, .styleguide__block--dark .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--dark h4, .styleguide__block--dark .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--dark h5, .styleguide__block--dark .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--dark h6, .styleguide__block--dark .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--black {
+  color: #ffffff;
+  background: #000000;
+}
+
+.styleguide__block--black h1, .styleguide__block--black .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--black h2, .styleguide__block--black .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--black h3, .styleguide__block--black .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--black h4, .styleguide__block--black .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--black h5, .styleguide__block--black .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--black h6, .styleguide__block--black .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--olive-green1 {
+  color: #000000;
+  background: #b9c77c;
+}
+
+.styleguide__block--olive-green1 h1, .styleguide__block--olive-green1 .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green1 h2, .styleguide__block--olive-green1 .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green1 h3, .styleguide__block--olive-green1 .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green1 h4, .styleguide__block--olive-green1 .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green1 h5, .styleguide__block--olive-green1 .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green1 h6, .styleguide__block--olive-green1 .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green2 {
+  color: #000000;
+  background: #9fb245;
+}
+
+.styleguide__block--olive-green2 h1, .styleguide__block--olive-green2 .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green2 h2, .styleguide__block--olive-green2 .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green2 h3, .styleguide__block--olive-green2 .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green2 h4, .styleguide__block--olive-green2 .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green2 h5, .styleguide__block--olive-green2 .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--olive-green2 h6, .styleguide__block--olive-green2 .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--turtle-green {
+  color: #000000;
+  background: #8ac44a;
+}
+
+.styleguide__block--turtle-green h1, .styleguide__block--turtle-green .title-1 {
+  color: #000000;
+}
+
+.styleguide__block--turtle-green h2, .styleguide__block--turtle-green .title-2 {
+  color: #000000;
+}
+
+.styleguide__block--turtle-green h3, .styleguide__block--turtle-green .title-3 {
+  color: #000000;
+}
+
+.styleguide__block--turtle-green h4, .styleguide__block--turtle-green .title-4 {
+  color: #000000;
+}
+
+.styleguide__block--turtle-green h5, .styleguide__block--turtle-green .title-5 {
+  color: #000000;
+}
+
+.styleguide__block--turtle-green h6, .styleguide__block--turtle-green .title-6 {
+  color: #000000;
+}
+
+.styleguide__block--rusty-red {
+  color: #ffffff;
+  background: #ad1616;
+}
+
+.styleguide__block--rusty-red h1, .styleguide__block--rusty-red .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--rusty-red h2, .styleguide__block--rusty-red .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--rusty-red h3, .styleguide__block--rusty-red .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--rusty-red h4, .styleguide__block--rusty-red .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--rusty-red h5, .styleguide__block--rusty-red .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--rusty-red h6, .styleguide__block--rusty-red .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--primary {
+  color: #ffffff;
+  background: #8ac44a;
+}
+
+.styleguide__block--primary h1, .styleguide__block--primary .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--primary h2, .styleguide__block--primary .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--primary h3, .styleguide__block--primary .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--primary h4, .styleguide__block--primary .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--primary h5, .styleguide__block--primary .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--primary h6, .styleguide__block--primary .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--secondary {
+  color: #ffffff;
+  background: #c3c3c3;
+}
+
+.styleguide__block--secondary h1, .styleguide__block--secondary .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--secondary h2, .styleguide__block--secondary .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--secondary h3, .styleguide__block--secondary .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--secondary h4, .styleguide__block--secondary .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--secondary h5, .styleguide__block--secondary .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--secondary h6, .styleguide__block--secondary .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--success {
+  color: #ffffff;
+  background: #b9c77c;
+}
+
+.styleguide__block--success h1, .styleguide__block--success .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--success h2, .styleguide__block--success .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--success h3, .styleguide__block--success .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--success h4, .styleguide__block--success .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--success h5, .styleguide__block--success .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--success h6, .styleguide__block--success .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--info {
+  color: #ffffff;
+  background: #17a2b8;
+}
+
+.styleguide__block--info h1, .styleguide__block--info .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--info h2, .styleguide__block--info .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--info h3, .styleguide__block--info .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--info h4, .styleguide__block--info .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--info h5, .styleguide__block--info .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--info h6, .styleguide__block--info .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--warning {
+  color: #ffffff;
+  background: #ffc107;
+}
+
+.styleguide__block--warning h1, .styleguide__block--warning .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--warning h2, .styleguide__block--warning .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--warning h3, .styleguide__block--warning .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--warning h4, .styleguide__block--warning .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--warning h5, .styleguide__block--warning .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--warning h6, .styleguide__block--warning .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--danger {
+  color: #ffffff;
+  background: #ad1616;
+}
+
+.styleguide__block--danger h1, .styleguide__block--danger .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--danger h2, .styleguide__block--danger .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--danger h3, .styleguide__block--danger .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--danger h4, .styleguide__block--danger .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--danger h5, .styleguide__block--danger .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--danger h6, .styleguide__block--danger .title-6 {
+  color: #ffffff;
+}
+
+/*@debug "---------------";
+@debug "theme schemes:";
+@debug map-keys(map-get($r-theme, "base-schemes"));
+
+@debug "---------------";
+@debug "$palette:";
+@debug map-keys($palette);
+
+@debug "---------------";
+@debug "$gradient-colors:";
+@debug map-keys($gradient-colors);
+
+@debug "---------------";*/

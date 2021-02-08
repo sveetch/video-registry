@@ -1,0 +1,159 @@
+/*
+ * Colors settings for enabled palette
+ */
+
+// Bootstrap theme map
+// ---------
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark
+);
+
+
+// Color schemes
+// ---------
+$white-color-scheme: (
+    font-color: $dark,
+    background: $white,
+);
+$smoke-color-scheme: (
+    font-color: $black,
+    background: $smoke,
+);
+$snow-color-scheme: (
+    font-color: $black,
+    background: $snow,
+);
+$pale-grey-color-scheme: (
+    font-color: $black,
+    background: $pale-grey,
+);
+$light-grey-color-scheme: (
+    font-color: $black,
+    background: $light-grey,
+);
+$silver-color-scheme: (
+    font-color: $black,
+    background: $silver,
+);
+$warm-grey-color-scheme: (
+    font-color: $white,
+    background: $warm-grey,
+);
+$medium-grey-color-scheme: (
+    font-color: $white,
+    background: $medium-grey,
+);
+$slate-grey-color-scheme: (
+    font-color: $white,
+    background: $slate-grey,
+);
+$charcoal-color-scheme: (
+    font-color: $white,
+    background: $charcoal,
+);
+$dark-color-scheme: (
+    font-color: $white,
+    background: $dark,
+);
+$black-color-scheme: (
+    font-color: $white,
+    background: $black,
+);
+$olive-green1-color-scheme: (
+    font-color: $black,
+    background: $olive-green1,
+);
+$olive-green2-color-scheme: (
+    font-color: $black,
+    background: $olive-green2,
+);
+$turtle-green-color-scheme: (
+    font-color: $black,
+    background: $turtle-green,
+);
+$rusty-red-color-scheme: (
+    font-color: $white,
+    background: $rusty-red,
+);
+
+// Plug schemes from Bootstrap themes for consistency
+$primary-color-scheme: (
+    font-color: $white,
+    background: $primary,
+);
+$secondary-color-scheme: (
+    font-color: $white,
+    background: $secondary,
+);
+$success-color-scheme: (
+    font-color: $white,
+    background: $success,
+);
+$info-color-scheme: (
+    font-color: $white,
+    background: $info,
+);
+$warning-color-scheme: (
+    font-color: $white,
+    background: $warning,
+);
+$danger-color-scheme: (
+    font-color: $white,
+    background: $danger,
+);
+
+
+// Color palette
+//
+$palette: (
+    "white": $white,
+    "smoke": $smoke,
+    "snow": $snow,
+    "pale-grey": $pale-grey,
+    "light-grey": $light-grey,
+    "silver": $silver,
+    "warm-grey": $warm-grey,
+    "medium-grey": $medium-grey,
+    "slate-grey": $slate-grey,
+    "charcoal": $charcoal,
+    "dark": $dark,
+    "black": $black,
+    "olive-green1": $olive-green1,
+    "olive-green2": $olive-green2,
+    "turtle-green": $turtle-green,
+    "rusty-red": $rusty-red,
+);
+
+// Enabled color schemes
+//
+$sv-colors-schemes: (
+    "white": $white-color-scheme,
+    "smoke": $smoke-color-scheme,
+    "snow": $snow-color-scheme,
+    "pale-grey": $pale-grey-color-scheme,
+    "light-grey": $light-grey-color-scheme,
+    "silver": $silver-color-scheme,
+    "warm-grey": $warm-grey-color-scheme,
+    "medium-grey": $medium-grey-color-scheme,
+    "slate-grey": $slate-grey-color-scheme,
+    "charcoal": $charcoal-color-scheme,
+    "dark": $dark-color-scheme,
+    "black": $black-color-scheme,
+    "olive-green1": $olive-green1-color-scheme,
+    "olive-green2": $olive-green2-color-scheme,
+    "turtle-green": $turtle-green-color-scheme,
+    "rusty-red": $rusty-red-color-scheme,
+    "primary": $primary-color-scheme,
+    "secondary": $secondary-color-scheme,
+    "success": $success-color-scheme,
+    "info": $info-color-scheme,
+    "warning": $warning-color-scheme,
+    "danger": $danger-color-scheme,
+);

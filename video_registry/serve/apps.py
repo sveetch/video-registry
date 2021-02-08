@@ -1,3 +1,4 @@
+import os
 import json
 from datetime import datetime
 
@@ -11,7 +12,14 @@ from video_registry.renderer import JinjaRenderer
 from video_registry.utils import CustomEncoder
 
 
+
 class ServerApp:
+    # Path to CSS manifest to parse from Styleguide app
+    STYLEGUIDE_MANIFEST_PATH = os.path.join(
+        'css',
+        'styleguide_manifest.css'
+    )
+
     """
     CherryPy Application for frontend and backend.
     """
@@ -24,9 +32,21 @@ class ServerApp:
     @cherrypy.expose
     def index(self):
         """
-        Index HTML page.
+        Index page.
         """
-        content = self.renderer.render("index.html", {})
+        content = self.renderer.render("index.html", self.context)
+        return content
+
+    @cherrypy.expose
+    def styleguide(self):
+        """
+        Styleguide page.
+
+        TODO:
+            Include code to build page context with styleguide using
+            py_css_styleguide
+        """
+        content = self.renderer.render("styleguide/index.html", self.context)
         return content
 
     @cherrypy.expose
@@ -44,6 +64,6 @@ class ServerApp:
     @cherrypy.expose
     def search(self, length=8):
         """
-        TODO: Backend response to search.
+        TODO: Backend response to search pattern ?
         """
         return json.dumps({"todo": "todo"})

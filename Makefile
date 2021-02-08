@@ -1,7 +1,8 @@
 PYTHON_INTERPRETER=python3
 VENV_PATH=.venv
-PIP=$(VENV_PATH)/bin/pip
+BOUSSOLE=$(VENV_PATH)/bin/boussole
 FLAKE=$(VENV_PATH)/bin/flake8
+PIP=$(VENV_PATH)/bin/pip
 PYTEST=$(VENV_PATH)/bin/pytest
 SPHINX_RELOAD=$(VENV_PATH)/bin/python sphinx_reload.py
 TWINE=$(VENV_PATH)/bin/twine
@@ -12,22 +13,23 @@ help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo
 	@echo "  install             -- to install this project with virtualenv and Pip"
-	@echo ""
+	@echo
 	@echo "  clean               -- to clean EVERYTHING (Warning)"
 	@echo "  clean-doc       -- to remove documentation builds"
 	@echo "  clean-pycache       -- to remove all __pycache__, this is recursive from current directory"
 	@echo "  clean-frontend      -- to clean Frontend side installation"
 	@echo "  clean-install       -- to clean Python side installation"
-	@echo ""
+	@echo
+	@echo "  css                  -- to build (uncompressed) CSS from Sass sources."
+	@echo "  watch-css            -- to watch for Sass changes to rebuild CSS"
+	@echo
 	@echo "  frontend            -- to build frontend into app static dir"
 	@echo "  watch-frontend      -- to launch webpack in watch mode to rebuild frontend on each change"
-# 	@echo ""
-# 	@echo "  livedocs            -- to run livereload server to rebuild documentation on source changes"
-	@echo ""
+	@echo
 	@echo "  flake               -- to launch Flake8 checking"
 	@echo "  tests               -- to launch base test suite using Pytest"
 	@echo "  quality             -- to launch Flake8 checking and every tests suites"
-	@echo ""
+	@echo
 	@echo "  release             -- to release package for latest version on PyPi (once release has been pushed to repository)"
 	@echo
 
@@ -64,10 +66,14 @@ install: venv
 	$(PIP) install -e .[dev]
 	npm install --production=false
 .PHONY: install
-#
-# livedocs:
-# 	$(SPHINX_RELOAD)
-# .PHONY: livedocs
+
+css:
+	$(BOUSSOLE) compile
+.PHONY: css
+
+watch-sass:
+	$(BOUSSOLE) watch
+.PHONY: watch-sass
 
 frontend:
 	npm run-script build

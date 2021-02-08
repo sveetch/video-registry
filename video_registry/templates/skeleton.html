@@ -6,11 +6,11 @@
     <title>{% block head_title %}Video Registry{% endblock head_title %}</title>
     <meta name="robots" content="follow, all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# <link rel="stylesheet" href="./main.css"> #}
+    <link rel="stylesheet" href="{{ STATIC_URL }}/css/main.css">
 </head>
 <body{% block body_attrs %}{% endblock body_attrs %}>
 {%- block body_content -%}
-<div class="body-content">
+<div class="page-container">
     <div class="page-header">
         <h1 class="page-header__title">Video Registry</h1>
     </div>

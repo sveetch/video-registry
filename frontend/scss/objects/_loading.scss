@@ -1,0 +1,30 @@
+/*
+ * Loading objects
+ */
+
+.loading-block {
+    @include sv-flex(1, 0, 100%);
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        @include font-size($h6-font-size);
+        margin: 0 auto;
+        padding: 2rem;
+        color: $warm-grey;
+        text-transform: uppercase;
+
+        &::before {
+            @include icomoon-helper($icon-spinner);
+            @include icon-spinning;
+            @include font-size(3rem);
+            display: block;
+            margin-bottom: 1rem;
+            color: inherit;
+        }
+    }
+}

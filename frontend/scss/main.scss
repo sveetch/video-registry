@@ -1,13 +1,44 @@
 @charset "utf-8";
 
+// Basic functions must be loaded before settings to be able to use them from
+// settings and objects
+@import "./tools/rem";
+@import "./tools/colors";
+@import "./tools/content_urls";
+
 // Load project settings
+@import "./settings/site";
 @import "./settings/fonts";
+@import "./settings/icomoon_icons";
+@import "./settings/palette";
+@import "./settings/theme";
 @import "./settings/bootstrap";
 
-// Import the whole Bootstrap component library
+// Import the whole Bootstrap and Vue components libraries
 @import "bootstrap/scss/bootstrap";
 @import 'bootstrap-vue/src/index.scss';
 
-.foop {
-    color: red;
-}
+// Internal addons (import order does matter due to some mixin usage from
+// deeper mixins)
+@import "./tools/icons";
+@import "./tools/flexbox";
+@import "./tools/buttons";
+@import "./tools/spacing";
+
+// Generic stuff
+@import "./generic/keyframes";
+@import "./generic/background";
+@import "./generic/type";
+@import "./generic/images";
+@import "./generic/accessibility";
+
+// Layout objects common to any pages
+@import "./objects/icomoon";
+@import "./objects/buttons";
+@import "./objects/loading";
+
+// Load page components
+@import "./components/container";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/content";

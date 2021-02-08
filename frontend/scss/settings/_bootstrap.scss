@@ -27,4 +27,10 @@ $container-max-widths: (
   xxl: 1240px,
 );
 
-$foo: bar;
+// Base body
+$body-color: $black;
+$body-bg: $white;
+
+// Adjust font families
+$font-family-base: $font-family-roboto;
+$headings-font-family: $font-family-roboto;

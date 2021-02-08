@@ -1,0 +1,89 @@
+@charset "utf-8";
+//
+// Styleguide manifest (used to build styleguide template contents)
+//
+
+
+// Basic functions must be loaded before settings to be able to use them from
+// settings and objects
+@import "./tools/rem";
+@import "./tools/colors";
+
+// Load project settings
+@import "./settings/site";
+@import "./settings/fonts";
+@import "./settings/icomoon_icons";
+@import "./settings/palette";
+@import "./settings/theme";
+@import "./settings/bootstrap";
+
+// Import the whole Bootstrap component library
+@import "bootstrap/scss/bootstrap";
+
+// Internal addons (import order does matter due to some mixin usage from
+// deeper mixins)
+@import "./tools/icons";
+@import "./tools/flexbox";
+@import "./tools/buttons";
+@import "./tools/spacing";
+
+// Generic stuff
+@import "./generic/background";
+@import "./generic/type";
+
+// Layout objects common to any pages
+@import "./objects/icomoon";
+
+// py-css-styleguide helpers
+@import "./tools/styleguide_helpers";
+
+// Enable every available reference
+.styleguide-metas-references{
+    --auto: "true";
+}
+
+// 1. Colors
+// ---------
+
+// Base color palette
+.styleguide-reference-palette{
+    --structure: "flat";
+    --keys: "#{get-names($palette)}";
+    --values: "#{get-values($palette)}";
+}
+
+// Enabled color schemes, using $sv-colors-schemes map where color is in
+// item property 'background', every other scheme properties are not exposed
+.styleguide-reference-schemes{
+    --splitter: "json-list";
+    --keys: '#{get-names-to-json($sv-colors-schemes)}';
+    --selector: '#{get-names-to-json($sv-colors-schemes, ".")}';
+    --background: '#{get-props-to-json($sv-colors-schemes, "background")}';
+}
+
+// Bootstrap theme colors
+.styleguide-reference-bootstrap_theme{
+    --structure: "flat";
+    --keys: "#{get-names($theme-colors)}";
+    --values: "#{get-values($theme-colors)}";
+}
+
+
+// 3. Typography
+// -------------
+
+// Enabled font families
+.styleguide-reference-fonts{
+    --structure: "list";
+    --items: "#{get-names($sv-fonts)}";
+}
+
+
+// Z. Vendor objects
+// -----------------
+
+// Icomoon icons
+.styleguide-reference-icons{
+    --structure: "list";
+    --items: "#{get-names($icons)}";
+}

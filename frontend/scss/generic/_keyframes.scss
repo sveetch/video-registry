@@ -1,0 +1,15 @@
+//
+// Available animation keyframes
+//
+
+// Basic infinite spinning as used for spinner icon.
+// This will only work with a correct square element, if you have width or height
+// difference even with less than 1px, animation subject will be shifted.
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

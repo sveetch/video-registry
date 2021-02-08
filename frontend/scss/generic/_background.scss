@@ -1,0 +1,6 @@
+// Build background colors
+@each $name, $value in $palette {
+  .bg-#{$name} {
+    background-color: $value !important;
+  }
+}

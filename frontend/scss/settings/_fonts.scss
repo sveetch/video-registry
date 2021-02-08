@@ -4,12 +4,12 @@
  * https://fonts.google.com/?selection.family=Inter:wght@400;600;700|PT+Serif:wght@700&sidebar.open
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-$font-family-inter: "Inter", sans-serif;
-$font-family-ptserif: "PT Serif", serif;
+$font-family-roboto: "Roboto", sans-serif;
+$font-family-serif: serif;
 
 $sv-fonts: (
-    inter: $font-family-inter,
-    ptserif: $font-family-ptserif,
+    roboto: $font-family-roboto,
+    serif: $font-family-serif,
 );

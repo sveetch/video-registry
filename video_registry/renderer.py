@@ -60,8 +60,4 @@ class JinjaRenderer:
         """
         document = self.get_template(template_name)
 
-        return document.render(
-            **{
-                "export": context,
-            }
-        )
+        return document.render(**context)

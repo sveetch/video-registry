@@ -1,0 +1,91 @@
+//
+// Button objects
+//
+// We override the Bootstrap button helpers to fit to our color schemes, form
+// factors and size helpers.
+//
+// Opposed to the Bootstrap way, default button does not have any colors, you
+// must given an additional classname for explicit color like "btn-something"
+//
+
+// Helper classes
+// Main purpose of these classes is to demonstrate mixins usage
+.btn {
+    @include button-base();
+
+    // Form factors
+    &-square {
+        @include button-base($form-factor: 'square');
+    }
+    &-pill {
+        @include button-base($form-factor: 'pill');
+    }
+    &-round {
+        @include button-base($form-factor: 'round');
+    }
+
+    // Size modifiers and their specific form factors
+    /*&-tiny {
+        @include button-tiny();
+
+        &.btn-square {
+            @include button-tiny($form-factor: 'square');
+        }
+        &.btn-pill {
+            @include button-tiny($form-factor: 'pill');
+        }
+        &.btn-round {
+            @include button-tiny($form-factor: 'round');
+        }
+    }*/
+
+    &-small {
+        @include button-small();
+
+        &.btn-square {
+            @include button-small($form-factor: 'square');
+        }
+        &.btn-pill {
+            @include button-small($form-factor: 'pill');
+        }
+        &.btn-round {
+            @include button-small($form-factor: 'round');
+        }
+    }
+
+    &-large {
+        @include button-large();
+
+        &.btn-square {
+            @include button-large($form-factor: 'square');
+        }
+        &.btn-pill {
+            @include button-large($form-factor: 'pill');
+        }
+        &.btn-round {
+            @include button-large($form-factor: 'round');
+        }
+    }
+
+    // Color variant modifiers class names following color schemes
+    @each $name, $scheme in $sv-colors-schemes {
+        &-#{$name} {
+            &:not(.disabled) {
+                @include sv-button-colors($scheme, $apply-border: true);
+
+                &:hover {
+                    @include sv-button-colors(
+                        $scheme,
+                        $apply-border: true,
+                        $prefix: 'hover'
+                    );
+                }
+            }
+            // Enforce colors to avoid framework 'disabled'
+            // selector to win priority
+            &.disabled {
+                @include sv-button-colors($scheme, $apply-border: true);
+            }
+        }
+    }
+}

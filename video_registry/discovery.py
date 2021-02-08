@@ -150,8 +150,6 @@ class VideoFileDiscovery:
         """
         Scan and store retrieved paths.
 
-        TODO: Finish storing files for location dirs.
-
         Arguments:
             directories (list): List of directory paths to scan.
         """
