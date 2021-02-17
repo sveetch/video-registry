@@ -6,12 +6,12 @@ function are documented.
 """
 import click
 
-from video_registry.logger import init_logger
+from ..logger import init_logger
 
-from video_registry.cli.version import version_command
-from video_registry.cli.greet import greet_command
-from video_registry.cli.discovery import discovery_command
-from video_registry.cli.run import run_command
+from .version import version_command
+from .greet import greet_command
+from .discovery import discovery_command
+from .run import run_command
 
 
 # Help alias on "-h" argument

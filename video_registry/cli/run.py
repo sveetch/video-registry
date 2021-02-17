@@ -3,8 +3,10 @@ import logging
 
 import click
 
-from video_registry.discovery import VideoFileDiscovery
-from video_registry.serve.server import RegistryServer
+from ..backend.initialize import init_database
+from ..backend.models import File
+from ..discovery import VideoFileDiscovery
+from ..serve import RegistryServer, Settings
 
 
 @click.command()
@@ -25,11 +27,18 @@ def run_command(context, directories):
     """
     logger = logging.getLogger("video-registry")
 
-    disco = VideoFileDiscovery()
-    filepaths = disco.scan(directories)
+    db = init_database()
+    db.create_tables([File])
 
-    server = RegistryServer(
-        "0.0.0.0",
-        8090,
+    disco = VideoFileDiscovery()
+    filepaths = disco.store(directories)
+
+    settings = Settings(
+        hostname="0.0.0.0",
+        port=8090,
     )
+
+    server = RegistryServer(settings)
     server.run()
+
+    #db.close()

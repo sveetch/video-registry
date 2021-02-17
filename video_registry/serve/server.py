@@ -5,41 +5,25 @@ import cherrypy
 
 import video_registry
 
-from .apps import ServerApp
+from .apps import RegistryApplication
+from .settings import Settings
 
 
 class RegistryServer:
     """
-    Server to serve frontend, backend and static applications.
+    Application server to initialize configuration and run Application.
 
     Arguments:
-        hostname (string): Newtwork Adress to bind on server.
-        port (integer): Newtwork Port to bind on server
+        settings (video_registry.serve.settings.Settings): Settings object
+            instance which contain every required settings and will be exposed
+            in template context.
 
     Attributes:
-        secure (boolean): Indicate server is running on HTTPS if ``True``.
-            Default is ``False``, assume server is running on HTTP. This is
-            currently only used to build server URL.
         log (logging): Logging object set to application "video-registry".
     """
-    def __init__(self, hostname, port, secure=False):
+    def __init__(self, settings):
         self.log = logging.getLogger("video-registry")
-        self.hostname = hostname
-        self.port = port
-        self.secure = secure
-        self.static_url = "/static"
-        self.static_dir = os.path.abspath(
-            os.path.join(
-                os.path.dirname(video_registry.__file__),
-                "assets",
-            )
-        )
-        self.templates_dir = os.path.abspath(
-            os.path.join(
-                os.path.dirname(video_registry.__file__),
-                "templates",
-            )
-        )
+        self.settings = settings
 
     def get_global_config(self):
         """
@@ -49,8 +33,8 @@ class RegistryServer:
             dict: Server configuration.
         """
         return {
-            "server.socket_host": self.hostname,
-            "server.socket_port": self.port,
+            "server.socket_host": self.settings.HTTP_HOSTNAME,
+            "server.socket_port": self.settings.HTTP_PORT,
             "engine.autoreload_on": False,
         }
 
@@ -75,7 +59,7 @@ class RegistryServer:
         return {
             #"tools.staticdir.index": "index.html",
             "tools.staticdir.on": True,
-            "tools.staticdir.dir": self.static_dir,
+            "tools.staticdir.dir": self.settings.STATIC_DIR,
         }
 
     def get_server_config(self):
@@ -87,20 +71,7 @@ class RegistryServer:
         """
         return {
             "/": self.get_root_config(),
-            self.static_url: self.get_static_app_config(),
-        }
-
-    def get_app_context(self):
-        """
-        Return context for main App.
-
-        Returns:
-            dict: Server configuration.
-        """
-        return {
-            "STATIC_DIR": self.static_dir,
-            "STATIC_URL": self.static_url,
-            "TEMPLATES_DIR": self.templates_dir,
+            self.settings.STATIC_URL: self.get_static_app_config(),
         }
 
     def run(self):
@@ -109,15 +80,15 @@ class RegistryServer:
         """
         msg = "Starting HTTP server on: {host}:{port}"
         self.log.info(msg.format(
-            host=self.hostname,
-            port=self.port
+            host=self.settings.HTTP_HOSTNAME,
+            port=self.settings.HTTP_PORT
         ))
 
         self.log.warning("Use CTRL+C to terminate.")
 
         cherrypy.config.update(self.get_global_config())
         cherrypy.quickstart(
-            ServerApp(self.get_app_context()),
+            RegistryApplication(self.settings),
             "",
             self.get_server_config(),
         )

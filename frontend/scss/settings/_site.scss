@@ -6,3 +6,6 @@
 $onepixel: 0.07143rem; // For 1rem = 14px
 // Debug line to possibly calibrate it again when base size has been changed
 // @debug "One pixel is " + rem-calc(1px);
+
+// Radius use for page container border
+$main-radius: 1.3rem;

@@ -2,4 +2,16 @@
  * Page header component
  */
 
-.page-header {}
+.page-header {
+    @include sv-scheme-colors($midnightblue-color-scheme);
+    padding: 0.7rem 1.4rem;
+    border-top-left-radius: $main-radius;
+    border-top-right-radius: $main-radius;
+
+    &__title {
+        @include font-size($h4-font-size);
+        margin: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

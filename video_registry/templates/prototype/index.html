@@ -1,0 +1,40 @@
+{% extends "skeleton.html" %}
+
+{% block head_title %}Prototype - {{ super() }}{% endblock %}
+
+{%- block content -%}
+<div class="page-content styleguide container">
+    <div class="pt-4 pb-4">
+        <div class="container">
+            <h2 class="page-content__title">Prototype</h2>
+
+            <div class="page-content__section section">
+                <div class="section__tabs tabs">
+                    <div class="section__wrapper">
+                        <ul role="tablist" class="nav nav-tabs">
+                            <li role="presentation" class="nav-item">
+                                <a href="#" class="nav-link active">/youdl/youdl/</a>
+                            </li>
+
+                            <li role="presentation" class="nav-item">
+                                <a href="#" class="nav-link">/home/foo/bar/plop/plip/</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content mt-3">
+                        <div role="tabpanel" aria-hidden="false" class="tab-pane active">
+                            <p>I'm the first tab</p>
+                        </div>
+
+                        <div role="tabpanel" aria-hidden="true" class="tab-pane">
+                            <p>I'm the second tab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{%- endblock content -%}

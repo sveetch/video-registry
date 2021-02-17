@@ -7,6 +7,7 @@
     <meta name="robots" content="follow, all">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ STATIC_URL }}/css/main.css">
+    {% block additional_css %}{% endblock additional_css %}
 </head>
 <body{% block body_attrs %}{% endblock body_attrs %}>
 {%- block body_content -%}

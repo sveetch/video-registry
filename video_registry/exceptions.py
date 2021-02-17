@@ -29,3 +29,10 @@ class HTTPServerError(MyAppBaseException):
     Exception to be raised when an error occurs with HTTP server.
     """
     pass
+
+
+class StyleguideError(MyAppBaseException):
+    """
+    Exception to be raised when there is an error with Styleguide manifest.
+    """
+    pass

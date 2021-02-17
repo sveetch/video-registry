@@ -3,7 +3,7 @@ import logging
 
 import click
 
-from video_registry.discovery import VideoFileDiscovery
+from ..discovery import VideoFileDiscovery
 
 
 @click.command()

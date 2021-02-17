@@ -46,10 +46,6 @@ $warm-grey-color-scheme: (
     font-color: $white,
     background: $warm-grey,
 );
-$medium-grey-color-scheme: (
-    font-color: $white,
-    background: $medium-grey,
-);
 $slate-grey-color-scheme: (
     font-color: $white,
     background: $slate-grey,
@@ -66,21 +62,42 @@ $black-color-scheme: (
     font-color: $white,
     background: $black,
 );
-$olive-green1-color-scheme: (
-    font-color: $black,
-    background: $olive-green1,
+$indianred2-color-scheme: (
+    background: $indianred2,
 );
-$olive-green2-color-scheme: (
-    font-color: $black,
-    background: $olive-green2,
+$azure2-color-scheme: (
+    font-color: $midnightblue,
+    background: $azure2,
 );
-$turtle-green-color-scheme: (
-    font-color: $black,
-    background: $turtle-green,
-);
-$rusty-red-color-scheme: (
+$goldenrod2-color-scheme: (
     font-color: $white,
-    background: $rusty-red,
+    background: $goldenrod2,
+);
+$seagreen3-color-scheme: (
+    font-color: $white,
+    background: $seagreen3,
+);
+$aliceblue-color-scheme: (
+    font-color: $midnightblue,
+    background: $aliceblue,
+);
+$lightcyan2-color-scheme: (
+    background: $lightcyan2,
+);
+$midnightblue-color-scheme: (
+    font-color: $white,
+    background: $midnightblue,
+);
+$deepskyblue2-color-scheme: (
+    background: $deepskyblue2,
+);
+$leaf-color-scheme: (
+    font-color: $white,
+    background: $leaf,
+);
+$firebrick2-color-scheme: (
+    font-color: $white,
+    background: $firebrick2,
 );
 
 // Plug schemes from Bootstrap themes for consistency
@@ -97,7 +114,7 @@ $success-color-scheme: (
     background: $success,
 );
 $info-color-scheme: (
-    font-color: $white,
+    font-color: $midnightblue,
     background: $info,
 );
 $warning-color-scheme: (
@@ -107,28 +124,6 @@ $warning-color-scheme: (
 $danger-color-scheme: (
     font-color: $white,
     background: $danger,
-);
-
-
-// Color palette
-//
-$palette: (
-    "white": $white,
-    "smoke": $smoke,
-    "snow": $snow,
-    "pale-grey": $pale-grey,
-    "light-grey": $light-grey,
-    "silver": $silver,
-    "warm-grey": $warm-grey,
-    "medium-grey": $medium-grey,
-    "slate-grey": $slate-grey,
-    "charcoal": $charcoal,
-    "dark": $dark,
-    "black": $black,
-    "olive-green1": $olive-green1,
-    "olive-green2": $olive-green2,
-    "turtle-green": $turtle-green,
-    "rusty-red": $rusty-red,
 );
 
 // Enabled color schemes
@@ -141,15 +136,20 @@ $sv-colors-schemes: (
     "light-grey": $light-grey-color-scheme,
     "silver": $silver-color-scheme,
     "warm-grey": $warm-grey-color-scheme,
-    "medium-grey": $medium-grey-color-scheme,
     "slate-grey": $slate-grey-color-scheme,
     "charcoal": $charcoal-color-scheme,
     "dark": $dark-color-scheme,
     "black": $black-color-scheme,
-    "olive-green1": $olive-green1-color-scheme,
-    "olive-green2": $olive-green2-color-scheme,
-    "turtle-green": $turtle-green-color-scheme,
-    "rusty-red": $rusty-red-color-scheme,
+    "azure2": $azure2-color-scheme,
+    "midnightblue": $midnightblue-color-scheme,
+    "deepskyblue2": $deepskyblue2-color-scheme,
+    "aliceblue": $aliceblue-color-scheme,
+    "seagreen3": $seagreen3-color-scheme,
+    "leaf": $leaf-color-scheme,
+    "lightcyan2": $lightcyan2-color-scheme,
+    "firebrick2": $firebrick2-color-scheme,
+    "indianred2": $indianred2-color-scheme,
+    "goldenrod2": $goldenrod2-color-scheme,
     "primary": $primary-color-scheme,
     "secondary": $secondary-color-scheme,
     "success": $success-color-scheme,

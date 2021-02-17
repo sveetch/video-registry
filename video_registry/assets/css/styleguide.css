@@ -82,10 +82,6 @@
   background-color: #878787;
 }
 
-.styleguide .palette__item--medium-grey .palette__color {
-  background-color: #817c7c;
-}
-
 .styleguide .palette__item--slate-grey .palette__color {
   background-color: #525a65;
 }
@@ -102,20 +98,44 @@
   background-color: #000000;
 }
 
-.styleguide .palette__item--olive-green1 .palette__color {
-  background-color: #b9c77c;
+.styleguide .palette__item--midnightblue .palette__color {
+  background-color: #0a2047;
 }
 
-.styleguide .palette__item--olive-green2 .palette__color {
-  background-color: #9fb245;
+.styleguide .palette__item--deepskyblue2 .palette__color {
+  background-color: #17abf2;
 }
 
-.styleguide .palette__item--turtle-green .palette__color {
-  background-color: #8ac44a;
+.styleguide .palette__item--azure2 .palette__color {
+  background-color: #dcedf8;
 }
 
-.styleguide .palette__item--rusty-red .palette__color {
-  background-color: #ad1616;
+.styleguide .palette__item--aliceblue .palette__color {
+  background-color: #f3f7f8;
+}
+
+.styleguide .palette__item--leaf .palette__color {
+  background-color: #6aa43b;
+}
+
+.styleguide .palette__item--seagreen3 .palette__color {
+  background-color: #3eca85;
+}
+
+.styleguide .palette__item--lightcyan2 .palette__color {
+  background-color: #c9ead9;
+}
+
+.styleguide .palette__item--firebrick2 .palette__color {
+  background-color: #e82437;
+}
+
+.styleguide .palette__item--indianred2 .palette__color {
+  background-color: #f85a68;
+}
+
+.styleguide .palette__item--goldenrod2 .palette__color {
+  background-color: #f6a023;
 }
 
 .styleguide__block {
@@ -325,35 +345,6 @@
   color: #ffffff;
 }
 
-.styleguide__block--medium-grey {
-  color: #ffffff;
-  background: #817c7c;
-}
-
-.styleguide__block--medium-grey h1, .styleguide__block--medium-grey .title-1 {
-  color: #ffffff;
-}
-
-.styleguide__block--medium-grey h2, .styleguide__block--medium-grey .title-2 {
-  color: #ffffff;
-}
-
-.styleguide__block--medium-grey h3, .styleguide__block--medium-grey .title-3 {
-  color: #ffffff;
-}
-
-.styleguide__block--medium-grey h4, .styleguide__block--medium-grey .title-4 {
-  color: #ffffff;
-}
-
-.styleguide__block--medium-grey h5, .styleguide__block--medium-grey .title-5 {
-  color: #ffffff;
-}
-
-.styleguide__block--medium-grey h6, .styleguide__block--medium-grey .title-6 {
-  color: #ffffff;
-}
-
 .styleguide__block--slate-grey {
   color: #ffffff;
   background: #525a65;
@@ -470,125 +461,224 @@
   color: #ffffff;
 }
 
-.styleguide__block--olive-green1 {
-  color: #000000;
-  background: #b9c77c;
+.styleguide__block--azure2 {
+  color: #0a2047;
+  background: #dcedf8;
 }
 
-.styleguide__block--olive-green1 h1, .styleguide__block--olive-green1 .title-1 {
-  color: #000000;
+.styleguide__block--azure2 h1, .styleguide__block--azure2 .title-1 {
+  color: #0a2047;
 }
 
-.styleguide__block--olive-green1 h2, .styleguide__block--olive-green1 .title-2 {
-  color: #000000;
+.styleguide__block--azure2 h2, .styleguide__block--azure2 .title-2 {
+  color: #0a2047;
 }
 
-.styleguide__block--olive-green1 h3, .styleguide__block--olive-green1 .title-3 {
-  color: #000000;
+.styleguide__block--azure2 h3, .styleguide__block--azure2 .title-3 {
+  color: #0a2047;
 }
 
-.styleguide__block--olive-green1 h4, .styleguide__block--olive-green1 .title-4 {
-  color: #000000;
+.styleguide__block--azure2 h4, .styleguide__block--azure2 .title-4 {
+  color: #0a2047;
 }
 
-.styleguide__block--olive-green1 h5, .styleguide__block--olive-green1 .title-5 {
-  color: #000000;
+.styleguide__block--azure2 h5, .styleguide__block--azure2 .title-5 {
+  color: #0a2047;
 }
 
-.styleguide__block--olive-green1 h6, .styleguide__block--olive-green1 .title-6 {
-  color: #000000;
+.styleguide__block--azure2 h6, .styleguide__block--azure2 .title-6 {
+  color: #0a2047;
 }
 
-.styleguide__block--olive-green2 {
-  color: #000000;
-  background: #9fb245;
-}
-
-.styleguide__block--olive-green2 h1, .styleguide__block--olive-green2 .title-1 {
-  color: #000000;
-}
-
-.styleguide__block--olive-green2 h2, .styleguide__block--olive-green2 .title-2 {
-  color: #000000;
-}
-
-.styleguide__block--olive-green2 h3, .styleguide__block--olive-green2 .title-3 {
-  color: #000000;
-}
-
-.styleguide__block--olive-green2 h4, .styleguide__block--olive-green2 .title-4 {
-  color: #000000;
-}
-
-.styleguide__block--olive-green2 h5, .styleguide__block--olive-green2 .title-5 {
-  color: #000000;
-}
-
-.styleguide__block--olive-green2 h6, .styleguide__block--olive-green2 .title-6 {
-  color: #000000;
-}
-
-.styleguide__block--turtle-green {
-  color: #000000;
-  background: #8ac44a;
-}
-
-.styleguide__block--turtle-green h1, .styleguide__block--turtle-green .title-1 {
-  color: #000000;
-}
-
-.styleguide__block--turtle-green h2, .styleguide__block--turtle-green .title-2 {
-  color: #000000;
-}
-
-.styleguide__block--turtle-green h3, .styleguide__block--turtle-green .title-3 {
-  color: #000000;
-}
-
-.styleguide__block--turtle-green h4, .styleguide__block--turtle-green .title-4 {
-  color: #000000;
-}
-
-.styleguide__block--turtle-green h5, .styleguide__block--turtle-green .title-5 {
-  color: #000000;
-}
-
-.styleguide__block--turtle-green h6, .styleguide__block--turtle-green .title-6 {
-  color: #000000;
-}
-
-.styleguide__block--rusty-red {
+.styleguide__block--midnightblue {
   color: #ffffff;
-  background: #ad1616;
+  background: #0a2047;
 }
 
-.styleguide__block--rusty-red h1, .styleguide__block--rusty-red .title-1 {
+.styleguide__block--midnightblue h1, .styleguide__block--midnightblue .title-1 {
   color: #ffffff;
 }
 
-.styleguide__block--rusty-red h2, .styleguide__block--rusty-red .title-2 {
+.styleguide__block--midnightblue h2, .styleguide__block--midnightblue .title-2 {
   color: #ffffff;
 }
 
-.styleguide__block--rusty-red h3, .styleguide__block--rusty-red .title-3 {
+.styleguide__block--midnightblue h3, .styleguide__block--midnightblue .title-3 {
   color: #ffffff;
 }
 
-.styleguide__block--rusty-red h4, .styleguide__block--rusty-red .title-4 {
+.styleguide__block--midnightblue h4, .styleguide__block--midnightblue .title-4 {
   color: #ffffff;
 }
 
-.styleguide__block--rusty-red h5, .styleguide__block--rusty-red .title-5 {
+.styleguide__block--midnightblue h5, .styleguide__block--midnightblue .title-5 {
   color: #ffffff;
 }
 
-.styleguide__block--rusty-red h6, .styleguide__block--rusty-red .title-6 {
+.styleguide__block--midnightblue h6, .styleguide__block--midnightblue .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--deepskyblue2 {
+  background: #17abf2;
+}
+
+.styleguide__block--aliceblue {
+  color: #0a2047;
+  background: #f3f7f8;
+}
+
+.styleguide__block--aliceblue h1, .styleguide__block--aliceblue .title-1 {
+  color: #0a2047;
+}
+
+.styleguide__block--aliceblue h2, .styleguide__block--aliceblue .title-2 {
+  color: #0a2047;
+}
+
+.styleguide__block--aliceblue h3, .styleguide__block--aliceblue .title-3 {
+  color: #0a2047;
+}
+
+.styleguide__block--aliceblue h4, .styleguide__block--aliceblue .title-4 {
+  color: #0a2047;
+}
+
+.styleguide__block--aliceblue h5, .styleguide__block--aliceblue .title-5 {
+  color: #0a2047;
+}
+
+.styleguide__block--aliceblue h6, .styleguide__block--aliceblue .title-6 {
+  color: #0a2047;
+}
+
+.styleguide__block--seagreen3 {
+  color: #ffffff;
+  background: #3eca85;
+}
+
+.styleguide__block--seagreen3 h1, .styleguide__block--seagreen3 .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--seagreen3 h2, .styleguide__block--seagreen3 .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--seagreen3 h3, .styleguide__block--seagreen3 .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--seagreen3 h4, .styleguide__block--seagreen3 .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--seagreen3 h5, .styleguide__block--seagreen3 .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--seagreen3 h6, .styleguide__block--seagreen3 .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--leaf {
+  color: #ffffff;
+  background: #6aa43b;
+}
+
+.styleguide__block--leaf h1, .styleguide__block--leaf .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--leaf h2, .styleguide__block--leaf .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--leaf h3, .styleguide__block--leaf .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--leaf h4, .styleguide__block--leaf .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--leaf h5, .styleguide__block--leaf .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--leaf h6, .styleguide__block--leaf .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--lightcyan2 {
+  background: #c9ead9;
+}
+
+.styleguide__block--firebrick2 {
+  color: #ffffff;
+  background: #e82437;
+}
+
+.styleguide__block--firebrick2 h1, .styleguide__block--firebrick2 .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--firebrick2 h2, .styleguide__block--firebrick2 .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--firebrick2 h3, .styleguide__block--firebrick2 .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--firebrick2 h4, .styleguide__block--firebrick2 .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--firebrick2 h5, .styleguide__block--firebrick2 .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--firebrick2 h6, .styleguide__block--firebrick2 .title-6 {
+  color: #ffffff;
+}
+
+.styleguide__block--indianred2 {
+  background: #f85a68;
+}
+
+.styleguide__block--goldenrod2 {
+  color: #ffffff;
+  background: #f6a023;
+}
+
+.styleguide__block--goldenrod2 h1, .styleguide__block--goldenrod2 .title-1 {
+  color: #ffffff;
+}
+
+.styleguide__block--goldenrod2 h2, .styleguide__block--goldenrod2 .title-2 {
+  color: #ffffff;
+}
+
+.styleguide__block--goldenrod2 h3, .styleguide__block--goldenrod2 .title-3 {
+  color: #ffffff;
+}
+
+.styleguide__block--goldenrod2 h4, .styleguide__block--goldenrod2 .title-4 {
+  color: #ffffff;
+}
+
+.styleguide__block--goldenrod2 h5, .styleguide__block--goldenrod2 .title-5 {
+  color: #ffffff;
+}
+
+.styleguide__block--goldenrod2 h6, .styleguide__block--goldenrod2 .title-6 {
   color: #ffffff;
 }
 
 .styleguide__block--primary {
   color: #ffffff;
-  background: #8ac44a;
+  background: #17abf2;
 }
 
 .styleguide__block--primary h1, .styleguide__block--primary .title-1 {
@@ -646,7 +736,7 @@
 
 .styleguide__block--success {
   color: #ffffff;
-  background: #b9c77c;
+  background: #6aa43b;
 }
 
 .styleguide__block--success h1, .styleguide__block--success .title-1 {
@@ -674,37 +764,37 @@
 }
 
 .styleguide__block--info {
-  color: #ffffff;
-  background: #17a2b8;
+  color: #0a2047;
+  background: #dcedf8;
 }
 
 .styleguide__block--info h1, .styleguide__block--info .title-1 {
-  color: #ffffff;
+  color: #0a2047;
 }
 
 .styleguide__block--info h2, .styleguide__block--info .title-2 {
-  color: #ffffff;
+  color: #0a2047;
 }
 
 .styleguide__block--info h3, .styleguide__block--info .title-3 {
-  color: #ffffff;
+  color: #0a2047;
 }
 
 .styleguide__block--info h4, .styleguide__block--info .title-4 {
-  color: #ffffff;
+  color: #0a2047;
 }
 
 .styleguide__block--info h5, .styleguide__block--info .title-5 {
-  color: #ffffff;
+  color: #0a2047;
 }
 
 .styleguide__block--info h6, .styleguide__block--info .title-6 {
-  color: #ffffff;
+  color: #0a2047;
 }
 
 .styleguide__block--warning {
   color: #ffffff;
-  background: #ffc107;
+  background: #f6a023;
 }
 
 .styleguide__block--warning h1, .styleguide__block--warning .title-1 {
@@ -733,7 +823,7 @@
 
 .styleguide__block--danger {
   color: #ffffff;
-  background: #ad1616;
+  background: #e82437;
 }
 
 .styleguide__block--danger h1, .styleguide__block--danger .title-1 {

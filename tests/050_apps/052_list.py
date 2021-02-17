@@ -1,16 +1,17 @@
 import json
 import os
 
-import pytest
-
 from video_registry.discovery import VideoFileDiscovery
 
 
-def test_search_view_all(settings, db, server_app):
+def test_list_view_all(test_settings, db, server_app):
+    """
+    View should return JSON data for discovered files.
+    """
     directories = [
-        os.path.join(settings.fixtures_path, "dummy-videos-dir"),
-        os.path.join(settings.fixtures_path, "another-dummy-dir"),
-        os.path.join(settings.fixtures_path, "dummy-videos-dir/foo"),
+        os.path.join(test_settings.fixtures_path, "dummy-videos-dir"),
+        os.path.join(test_settings.fixtures_path, "another-dummy-dir"),
+        os.path.join(test_settings.fixtures_path, "dummy-videos-dir/foo"),
     ]
 
     disco = VideoFileDiscovery()

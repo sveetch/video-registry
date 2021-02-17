@@ -1,5 +1,18 @@
 /*
- * Base page container
+ * Page body and top level container
  */
 
-.page-container {}
+body {
+    padding: 1.4rem;
+}
+
+.page-container {
+    margin: 0 auto;
+    width: calc(100vw - 2.8rem);
+    max-width: rem-calc(1200px);
+    min-height: calc(100vh - 2.8rem);
+    background: $white;
+    border-radius: $main-radius;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 0.3rem 0.3rem rgba($silver, 0.2);
+}

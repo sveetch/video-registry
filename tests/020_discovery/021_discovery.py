@@ -94,17 +94,17 @@ def test_get_video_extensions(exts, expected):
         },
     ),
 ])
-def test_format_file_item(caplog, settings, filepath, basedir, expected):
+def test_format_file_item(caplog, test_settings, filepath, basedir, expected):
     """
     Method should return all informations for given file path.
     """
     caplog.set_level(logging.DEBUG)
 
     # Replace fixtures directory pattern with the right one
-    filepath = settings.format(filepath)
-    basedir = settings.format(basedir)
-    expected["basedir"] = settings.format(expected["basedir"])
-    expected["absolute_path"] = settings.format(expected["absolute_path"])
+    filepath = test_settings.format(filepath)
+    basedir = test_settings.format(basedir)
+    expected["basedir"] = test_settings.format(expected["basedir"])
+    expected["absolute_path"] = test_settings.format(expected["absolute_path"])
 
     disco = VideoFileDiscovery()
 
@@ -115,15 +115,15 @@ def test_format_file_item(caplog, settings, filepath, basedir, expected):
     assert infos == expected
 
 
-def test_scan_directory(settings):
+def test_scan_directory(test_settings):
     """
     A directory scanning should return every file informations
     according to file extension matching against allowed video extensions.
     """
-    directory = os.path.join(settings.fixtures_path, "dummy-videos-dir")
+    directory = os.path.join(test_settings.fixtures_path, "dummy-videos-dir")
     #directory = "/youdl/youdl/"
     # Mimic like we already know this file
-    dummy_knowed = settings.format("{FIXTURES}/dummy-videos-dir/foo/simpsons_1.mp4")
+    dummy_knowed = test_settings.format("{FIXTURES}/dummy-videos-dir/foo/simpsons_1.mp4")
 
     disco = VideoFileDiscovery()
 
@@ -136,15 +136,15 @@ def test_scan_directory(settings):
     assert len([item for item in paths if isinstance(item, dict)]) == 8
 
 
-def test_scan(settings):
+def test_scan(test_settings):
     """
     Batch scan should collect every file informations according to file
     extension matching from all directories and without duplication.
     """
     directories = [
-        os.path.join(settings.fixtures_path, "dummy-videos-dir"),
-        os.path.join(settings.fixtures_path, "another-dummy-dir"),
-        os.path.join(settings.fixtures_path, "dummy-videos-dir/foo"),
+        os.path.join(test_settings.fixtures_path, "dummy-videos-dir"),
+        os.path.join(test_settings.fixtures_path, "another-dummy-dir"),
+        os.path.join(test_settings.fixtures_path, "dummy-videos-dir/foo"),
     ]
 
     disco = VideoFileDiscovery()
@@ -155,14 +155,14 @@ def test_scan(settings):
     assert len(paths) == 11
 
 
-def test_store(settings, db):
+def test_store(test_settings, db):
     """
     Every valid file should be stored.
     """
     directories = [
-        os.path.join(settings.fixtures_path, "dummy-videos-dir"),
-        os.path.join(settings.fixtures_path, "another-dummy-dir"),
-        os.path.join(settings.fixtures_path, "dummy-videos-dir/foo"),
+        os.path.join(test_settings.fixtures_path, "dummy-videos-dir"),
+        os.path.join(test_settings.fixtures_path, "another-dummy-dir"),
+        os.path.join(test_settings.fixtures_path, "dummy-videos-dir/foo"),
     ]
 
     disco = VideoFileDiscovery()

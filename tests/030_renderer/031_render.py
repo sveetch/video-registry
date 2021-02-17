@@ -3,14 +3,13 @@ from video_registry.renderer import JinjaRenderer
 from tests.utils import html_pyquery
 
 
-def test_index(settings, server_context):
+def test_index(server_settings):
     """
-    Index HTML page rendering.
-
-    NOTE: This is dummy for now since there is no real page yet.
+    Renderer should correctly build the page document from template without
+    any errors.
     """
     renderer = JinjaRenderer(
-        templates_dir=server_context["TEMPLATES_DIR"],
+        templates_dir=server_settings.TEMPLATES_DIR,
     )
 
     content = renderer.render("index.html", {})

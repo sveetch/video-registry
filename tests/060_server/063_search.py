@@ -3,20 +3,21 @@ import pytest
 import cherrypy
 from cherrypy.test import helper
 
-from video_registry.serve.apps import ServerApp
-from video_registry.serve.server import RegistryServer
+from video_registry.serve import RegistryApplication, RegistryServer, Settings
 
 
-@pytest.mark.usefixtures("server_context_class")
+@pytest.mark.usefixtures("server_settings_class")
 class SearchViewTest(helper.CPWebCase):
     helper.CPWebCase.interactive = False
 
     @staticmethod
     def setup_server():
-        server = RegistryServer("localhost", "8080")
+        # Static method cannot reach "self.server_settings" so we need to make
+        # an identical Settings() instance with default values
+        server = RegistryServer(Settings())
 
         cherrypy.tree.mount(
-            ServerApp(server.get_app_context()),
+            RegistryApplication(server.settings),
             "",
             server.get_server_config(),
         )

@@ -11,26 +11,54 @@ $pale-grey: #eeeeee;
 $light-grey: #e5e5e5;
 $silver: #c3c3c3;
 $warm-grey: #878787;
-$medium-grey: #817c7c;
 $slate-grey: #525a65;
 $charcoal: #333333;
 $dark: #252525;
 $black: #000000;
-$olive-green1: #b9c77c;
-$olive-green2: #9fb245;
-$turtle-green: #8ac44a;
-$cerise: #ea1f62;
-$rusty-red: #ad1616;
-$yellow: #ffc107;
-$cyan: #17a2b8;
+$indianred2: #f85a68;
+$azure2: #dcedf8;
+$goldenrod2: #f6a023;
+$seagreen3: #3eca85;
+$aliceblue: #f3f7f8;
+$lightcyan2: #c9ead9;
+$midnightblue: #0a2047;
+$deepskyblue2: #17abf2;
+$leaf: #6aa43b;
+$firebrick2: #e82437;
 
 // Bootstrap theme names
 // ---------
-$primary: $turtle-green;
+$primary: $deepskyblue2;
 $secondary: $silver;
-$success: $olive-green1;
-$info: $cyan;
-$warning: $yellow;
-$danger: $rusty-red;
+$success: $leaf;
+$info: $azure2;
+$warning: $goldenrod2;
+$danger: $firebrick2;
 $light: $smoke;
 $dark: $dark;
+
+// Color palette
+//
+$palette: (
+    "white": $white,
+    "smoke": $smoke,
+    "snow": $snow,
+    "pale-grey": $pale-grey,
+    "light-grey": $light-grey,
+    "silver": $silver,
+    "warm-grey": $warm-grey,
+    "slate-grey": $slate-grey,
+    "charcoal": $charcoal,
+    "dark": $dark,
+    "black": $black,
+    "midnightblue": $midnightblue,
+    "deepskyblue2": $deepskyblue2,
+    "azure2": $azure2,
+    "aliceblue": $aliceblue,
+    "leaf": $leaf,
+    "seagreen3": $seagreen3,
+    "lightcyan2": $lightcyan2,
+    "firebrick2": $firebrick2,
+    "indianred2": $indianred2,
+    "goldenrod2": $goldenrod2,
+);

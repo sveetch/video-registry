@@ -1,91 +1,19 @@
-$icon-arrow-back: "\e901";
-$icon-arrow-right: "\e900";
-$icon-bell: "\e910";
-$icon-building: "\e903";
-$icon-calendar: "\e921";
-$icon-checkmark: "\e91e";
-$icon-chevron-backward: "\e90f";
-$icon-chevron-down: "\e907";
-$icon-chevron-left: "\e90b";
-$icon-chevron-right: "\e919";
-$icon-chevron-up: "\e91d";
-$icon-crane: "\e904";
-$icon-cross: "\e916";
-$icon-diamand: "\e906";
-$icon-divider: "\e929";
-$icon-dot: "\e920";
-$icon-download: "\e928";
-$icon-export: "\e908";
-$icon-file-pdf: "\e911";
-$icon-grant: "\e905";
-$icon-in-charge: "\e918";
-$icon-layers: "\e90a";
-$icon-logout: "\e902";
-$icon-magnifier: "\e923";
-$icon-mail: "\e90d";
-$icon-mail-edit: "\e90c";
-$icon-management: "\e909";
-$icon-market: "\e90e";
-$icon-operator-addition: "\e925";
-$icon-operator-equal: "\e924";
-$icon-operator-multiplication: "\e926";
-$icon-operator-substraction: "\e927";
-$icon-performance: "\e912";
-$icon-report: "\e914";
-$icon-report-detail: "\e917";
-$icon-report-monthly: "\e913";
-$icon-report-summary: "\e915";
-$icon-services: "\e91a";
-$icon-settings: "\e91b";
-$icon-spinner: "\e922";
-$icon-tools: "\e91c";
-$icon-warning: "\e91f";
-
+$icon-plus: "\ea0a";
+$icon-minus: "\ea0b";
+$icon-cross: "\ea0f";
+$icon-checkmark: "\ea10";
+$icon-arrow-right: "\ea34";
+$icon-arrow-left: "\ea38";
+$icon-spinner: "\e900";
 
 $icons: (
-    icon-arrow-back: $icon-arrow-back,
-    icon-arrow-right: $icon-arrow-right,
-    icon-bell: $icon-bell,
-    icon-building: $icon-building,
-    icon-calendar: $icon-calendar,
-    icon-checkmark: $icon-checkmark,
-    icon-chevron-backward: $icon-chevron-backward,
-    icon-chevron-down: $icon-chevron-down,
-    icon-chevron-left: $icon-chevron-left,
-    icon-chevron-right: $icon-chevron-right,
-    icon-chevron-up: $icon-chevron-up,
-    icon-crane: $icon-crane,
+    icon-plus: $icon-plus,
+    icon-minus: $icon-minus,
     icon-cross: $icon-cross,
-    icon-diamand: $icon-diamand,
-    icon-divider: $icon-divider,
-    icon-dot: $icon-dot,
-    icon-download: $icon-download,
-    icon-export: $icon-export,
-    icon-file-pdf: $icon-file-pdf,
-    icon-grant: $icon-grant,
-    icon-in-charge: $icon-in-charge,
-    icon-layers: $icon-layers,
-    icon-logout: $icon-logout,
-    icon-magnifier: $icon-magnifier,
-    icon-mail: $icon-mail,
-    icon-mail-edit: $icon-mail-edit,
-    icon-management: $icon-management,
-    icon-market: $icon-market,
-    icon-operator-addition: $icon-operator-addition,
-    icon-operator-equal: $icon-operator-equal,
-    icon-operator-multiplication: $icon-operator-multiplication,
-    icon-operator-substraction: $icon-operator-substraction,
-    icon-performance: $icon-performance,
-    icon-report: $icon-report,
-    icon-report-detail: $icon-report-detail,
-    icon-report-monthly: $icon-report-monthly,
-    icon-report-summary: $icon-report-summary,
-    icon-services: $icon-services,
-    icon-settings: $icon-settings,
+    icon-checkmark: $icon-checkmark,
+    icon-arrow-right: $icon-arrow-right,
+    icon-arrow-left: $icon-arrow-left,
     icon-spinner: $icon-spinner,
-    icon-tools: $icon-tools,
-    icon-warning: $icon-warning,
-
 );
 
 @mixin include-icons(){

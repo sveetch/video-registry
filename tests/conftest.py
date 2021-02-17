@@ -10,8 +10,7 @@ import video_registry
 
 from video_registry.backend.initialize import init_database
 from video_registry.backend.models import Dummy, File
-from video_registry.serve.apps import ServerApp
-from video_registry.serve.server import RegistryServer
+from video_registry.serve import RegistryApplication, RegistryServer, Settings
 
 
 class FixturesSettingsTestMixin(object):
@@ -84,16 +83,16 @@ def temp_builds_dir(tmpdir_factory):
 
 
 @pytest.fixture(scope="module")
-def settings():
+def test_settings():
     """
     Initialize and return settings for tests.
 
     Example:
         You may use it like: ::
 
-            def test_foo(settings):
-                print(settings.package_path)
-                print(settings.format("foo: {VERSION}"))
+            def test_foo(test_settings):
+                print(test_settings.package_path)
+                print(test_settings.format("foo: {VERSION}"))
     """
     return FixturesSettingsTestMixin()
 
@@ -123,34 +122,33 @@ def db(caplog):
     db.close()
 
 
-def get_server_context():
+def get_settings():
     """
-    Return server context.
+    Return default settings.
     """
-    server = RegistryServer("localhost", "8080")
-    return server.get_app_context()
+    return Settings()
 
 
 @pytest.fixture(scope="module")
-def server_context():
+def server_settings():
     """
-    Function fixture for "get_server_context"
+    Function fixture for "get_settings"
     """
-    return get_server_context()
-
-
-@pytest.fixture(scope="module")
-def server_app(server_context):
-    """
-    Return ServerApp instance.
-    """
-    return ServerApp(server_context)
+    return get_settings()
 
 
 @pytest.fixture(scope="class")
-def server_context_class(request):
+def server_settings_class(request):
     """
-    TestCase class fixture for "get_server_context"
+    TestCase class fixture for "get_settings"
     """
     # set a class attribute on the invoking test context
-    request.cls.server_context = get_server_context()
+    request.cls.server_settings = get_settings()
+
+
+@pytest.fixture(scope="module")
+def server_app(server_settings):
+    """
+    Return RegistryApplication instance.
+    """
+    return RegistryApplication(server_settings)

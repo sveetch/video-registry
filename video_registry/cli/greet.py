@@ -3,7 +3,7 @@ import logging
 
 import click
 
-from video_registry.hello import HelloBase, HelloHTML
+from ..hello import HelloBase, HelloHTML
 
 
 @click.command()
